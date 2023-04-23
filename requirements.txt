@@ -1,0 +1,6 @@
+langchain
+pypdf
+pymilvus
+openai
+tiktoken
+colorama==0.4.6
