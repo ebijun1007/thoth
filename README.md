@@ -1,7 +1,11 @@
-# book-discussion-copilot
-Read e-book and discuss with LLM based copilot
+# Thoth
+**Thoth** is a cutting-edge _reading support tool_ inspired by the ancient Egyptian god of wisdom and knowledge. Our mission is to _enhance your reading experience_ by providing insightful summaries and fostering a deeper understanding of the content.
 
-Need OpenAI API key to call ChatGPT API.
+Thoth is designed to assist readers with thought-provoking questions and personalized recommendations, allowing you to engage with your favorite books on a whole new level. _Harness the wisdom of Thoth_ and unlock the full potential of your reading journey.
+
+Embrace the power of knowledge with **Thoth** by your side.
+
+Powered By [Auto-GPT](https://github.com/Significant-Gravitas/Auto-GPT)
 
 ## Setup
 ```
@@ -12,7 +16,7 @@ docker compose run --rm copilot
 
 ## sample
 ```
-ebijun@Mac-mini-3 book-discussion-copilot % docker compose run --rm copilot
+ebijun@Mac-mini-3 book-discussion-copilot % docker compose run --rm thoth
 [+] Running 3/0
  ⠿ Container milvus-minio Running
  ⠿ Container milvus-etcd  Running

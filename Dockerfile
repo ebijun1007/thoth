@@ -12,4 +12,4 @@ RUN pip install -r requirements.txt
 WORKDIR /app
 
 # Set the entrypoint
-ENTRYPOINT ["python", "main.py"]
+ENTRYPOINT ["python", "-m", "thoth"]
