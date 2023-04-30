@@ -9,21 +9,7 @@ Embrace the power of knowledge with **Thoth** by your side.
 ```
 cp .env.sample .env
 docker compose build
-docker compose run --rm copilot
+docker compose run --rm python -m thoth
 ```
 
-## sample
-```
-ebijun@Mac-mini-3 book-discussion-copilot % docker compose run --rm thoth
-[+] Running 3/0
- ⠿ Container milvus-minio Running
- ⠿ Container milvus-etcd  Running
- ⠿ Container milvus-standalone Running
-
-Choose a book to read. If empty './books/00000_example.pdf' will be load
-book:
-Enter your question: Who is the author?
- The author is Satoshi Nakamoto.
-Enter your question: exit
-ebijun@Mac-mini-3 book-discussion-copilot %
-```
+![ 2023-04-30 20 37 07](https://user-images.githubusercontent.com/28303021/235350948-b805d695-6e21-434e-a276-9f2e02f9d541.png)
