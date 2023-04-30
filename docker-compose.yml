@@ -1,5 +1,3 @@
-# To boot the app run the following:
-# docker-compose run auto-gpt
 version: "3.9"
 
 services:

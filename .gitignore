@@ -1,3 +1,7 @@
 /books/**/*
 .env
 volumes
+
+shelf.yml
+
+thoth/logs/*

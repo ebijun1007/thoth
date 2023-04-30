@@ -5,8 +5,6 @@ Thoth is designed to assist readers with thought-provoking questions and persona
 
 Embrace the power of knowledge with **Thoth** by your side.
 
-Powered By [Auto-GPT](https://github.com/Significant-Gravitas/Auto-GPT)
-
 ## Setup
 ```
 cp .env.sample .env
