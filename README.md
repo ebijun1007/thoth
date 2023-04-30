@@ -12,4 +12,7 @@ docker compose build
 docker compose run --rm python -m thoth
 ```
 
-![ 2023-04-30 20 37 07](https://user-images.githubusercontent.com/28303021/235350948-b805d695-6e21-434e-a276-9f2e02f9d541.png)
+
+
+https://user-images.githubusercontent.com/28303021/235352445-0811fe8e-8579-450e-8e41-9aa711eea1b5.mov
+
