@@ -6,3 +6,5 @@ tiktoken
 colorama
 pyyaml
 prompt_toolkit
+click
+gtts

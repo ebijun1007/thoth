@@ -13,6 +13,7 @@ from langchain.memory import ChatMessageHistory
 from thoth.config import check_openai_api_key, create_config
 from thoth.prompts.autocomplete import Mode, input_book, input_mode
 from thoth.utils.logs import Logger
+from thoth.utils.spinner import Spinner
 
 
 @click.group(invoke_without_command=True)
@@ -36,21 +37,22 @@ def main(ctx: click.Context,speak: bool) -> None:
             collection_name = "shelf"
         embeddings = OpenAIEmbeddings()
         loader = PyPDFLoader(f"./books/{book}")
-        documents = loader.load()
-
-        text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
-        docs = text_splitter.split_documents(documents)
-        vectorstore = Milvus.from_documents(
-            docs,
-            embeddings,
-            connection_args={"host": "vectorstore", "port": "19530"},
-            collection_name=f"_{collection_name}",
-        )
+        with Spinner("Parsing... "):
+            documents = loader.load()
+            text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
+            docs = text_splitter.split_documents(documents)
+            vectorstore = Milvus.from_documents(
+                docs,
+                embeddings,
+                connection_args={"host": "vectorstore", "port": "19530"},
+                collection_name=f"_{collection_name}",
+            )
         qa = ConversationalRetrievalChain.from_llm(OpenAI(temperature=0), vectorstore.as_retriever())
         history = ChatMessageHistory()
         while True:
             query = input("Ask: ")
-            result = qa({"question": query, "chat_history": []})
+            with Spinner("Reading... "):
+                result = qa({"question": query, "chat_history": []})
             logger.typewriter_log(
                 result["answer"], Fore.GREEN
             )
