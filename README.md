@@ -1,3 +1,5 @@
+Losing motivation with the advent of [PDF.ai](https://pdf.ai/)...
+
 # Thoth
 **Thoth** is a cutting-edge _reading support tool_ inspired by the ancient Egyptian god of wisdom and knowledge. Our mission is to _enhance your reading experience_ by providing insightful summaries and fostering a deeper understanding of the content.
 
