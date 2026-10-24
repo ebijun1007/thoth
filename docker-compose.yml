@@ -13,7 +13,7 @@ services:
 
   vectorstore:
     container_name: milvus-standalone
-    image: milvusdb/milvus:v2.2.6
+    image: milvusdb/milvus:v3.0.3
     command: ["milvus", "run", "standalone"]
     environment:
       ETCD_ENDPOINTS: etcd:2379
